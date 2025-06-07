@@ -11,5 +11,3 @@ export type Action = {
     url?: any;
     output?: any;
   };
-
-  
