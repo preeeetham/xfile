@@ -16,10 +16,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "File Flow - Free images and video converter",
+  title: "X-file",
   description:
-    "File Flow a unlimited free online file, video, audio and image converter.",
-  creator: "Sushank Ghimire",
+    "Xfile is an unlimited free online file, video, audio, and image converter.",
+  creator: "Next application",
   keywords: [
     "File Converter",
     "Audio Converter",
@@ -28,8 +28,6 @@ export const metadata: Metadata = {
     "Free",
     "Unlimited",
   ],
-  authors: [{ name: "Sushank Ghimire" }],
-
 };
 
 export default function RootLayout({
@@ -38,11 +36,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html data-theme="light" lang="en">
+    <html lang="en" className="h-full bg-background text-foreground">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full bg-background text-foreground overflow-x-hidden`}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>
       </body>
